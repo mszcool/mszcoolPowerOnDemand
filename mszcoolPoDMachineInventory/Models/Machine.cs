@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace mszcoolPoDMachineInventory.Models
 {
-    public class MachineEntry
+    public class Machine
     {
-        public string MachineId { get; set; }
+        public string Id { get; set; }
+        public string EnvironmentId { get; set; }
         public string MachineName { get; set; }
-        public string MachineDescription { get; set; }
+        public string Description { get; set; }
         public string OwnerNameId { get; set; }
         public MachineTypes MachineType { get; set; }
-        public IPAddress MachineIpAddress { get; set; }
-        public IPAddress MachineIpSubnet { get; set; }
-        public string MachineMacAddress { get; set; }
+        public MachineAdressDetails AddressDetails { get; set; }
+        public List<PoDTaskDefinition> SupportedTasks { get; set; }
     }
 }

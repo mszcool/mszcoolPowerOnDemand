@@ -9,36 +9,36 @@ using mszcoolPoDMachineInventory.Models;
 
 namespace mszcoolPoDMachineInventory.Controllers
 {
-    [Route("api/machines/inventory")]
-    public class MachinesInventoryController : Controller
+    [Route("api/environments")]
+    public class EnvironmentsController : Controller
     {
-        // GET: api/values
+        // GET: api/environments
         [HttpGet]
-        public IEnumerable<MachineEntry> Get()
+        public IEnumerable<Machine> Get()
         {
             return null;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public MachineEntry Get(string id)
+        // GET api/environments/{environmentName}
+        [HttpGet("{environmentName}")]
+        public Machine Get(string environmentName)
         {
             return null;
         }
 
-        // POST api/values
+        // POST api/environments
         [HttpPost]
-        public void Post([FromBody]MachineEntry machine)
+        public void Post([FromBody]PoDEnvironment environment)
         {
         }
 
-        // PUT api/values/5
+        // PUT api/environments
         [HttpPut("{id}")]
-        public void Put(string id, [FromBody]MachineEntry value)
+        public void Put(string id, [FromBody]PoDEnvironment environment)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/environments/238729-234234-4327682-32432
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
