@@ -18,19 +18,13 @@ namespace mszcoolPoDMachineInventory.Controllers
         }
 
         [HttpPost()]
-        public void Post(string environmentId, [FromBody]Machine machine)
-        {
-
-        }
-
-        [HttpPut("{machineId}")]
-        public void Put(string environmentId, string machineId, [FromBody]Machine machine)
+        public void Onboard(string environmentId, [FromBody]Machine machine)
         {
 
         }
 
         [HttpDelete("{machineId}")]
-        public void Delete(string environmentId, string machineId)
+        public void RemoveMachine(string environmentId, string machineId)
         {
 
         }

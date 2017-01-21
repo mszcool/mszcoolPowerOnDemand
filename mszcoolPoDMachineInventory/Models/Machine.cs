@@ -15,6 +15,5 @@ namespace mszcoolPoDMachineInventory.Models
         public string OwnerNameId { get; set; }
         public MachineTypes MachineType { get; set; }
         public MachineAdressDetails AddressDetails { get; set; }
-        public List<PoDTaskDefinition> SupportedTasks { get; set; }
     }
 }
