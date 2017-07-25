@@ -26,8 +26,8 @@ namespace mszcoolPoDMachineInventory.Controllers
         }
 
         // DELETE api/environments/238729-234234-4327682-32432
-        [HttpDelete("{id}")]
-        public void RemoveEnvironment(string id)
+        [HttpDelete("{environmentName}")]
+        public void RemoveEnvironment(string environmentName)
         {
         }
     }
