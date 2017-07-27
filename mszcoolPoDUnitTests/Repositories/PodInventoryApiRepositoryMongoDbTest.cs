@@ -143,14 +143,14 @@ namespace mszcoolPoDUnitTests.Repositories
             var targetOwnerIdx = new Random().Next(0, EnvironmentTestOwnersData.Length - 1);
             var targetOwner = EnvironmentTestOwnersData[targetOwnerIdx];
 
-            var expected = EnvironmentTestBaseData.Select(e => e.EnvironmentOwnerNameId == targetOwner);
+            var expected = EnvironmentTestBaseData.Where(e => e.EnvironmentOwnerNameId == targetOwner);
 
             var actual = testee.GetEnvironments(targetOwner);
 
             Assert.AreEqual(expected.Count(), actual.Count());
             foreach (var expectedItem in expected)
             {
-                //Assert.IsNotNull(actual.Select(a => a.EnvironmentName == expectedItem.))
+                Assert.IsNotNull(actual.Select(a => a.EnvironmentName == expectedItem.EnvironmentName));
             }
         }
 
